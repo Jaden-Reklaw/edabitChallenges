@@ -5,6 +5,7 @@ to the function. For example, if the input is 4 then
 your function should return 10 because 1 + 2 + 3 + 4 = 10.
 */
 
+//Obvious Way to do this
 // function addUp(num =1) {
 // 		var n = 0;
 // 		var acc = 0;
@@ -22,4 +23,6 @@ function addUp(num) {
 	if (num === 1) return 1;
 	return num + addUp(num - 1);
 }
+
+
 
