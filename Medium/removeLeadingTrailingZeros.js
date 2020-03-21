@@ -29,6 +29,12 @@ function removeLeadingTrailing(n) {
 
 const removeLeadingTrailing = (n) => +n;
 
+//or
+
+function removeLeadingTrailing(n) {
+	return Math.abs(n);
+}
+
 //Other way with regular expressions
 function removeLeadingTrailing(n) {
 	//Number(n)
