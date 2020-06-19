@@ -1,9 +1,9 @@
-$(document).ready(onReady);
+console.log('test');
 
-function onReady() {
-	$('#input').on('blur', getValues);
+function consecOnes(array) {
+	let arr = array.join().replace(",", "");
+	console.log('arr is',arr);
 }
 
-function getValues(event) {
-	console.log($(this).text());
-}
+
+consecOnes([1,0,1,1,1,1,1,0,1,1]);
