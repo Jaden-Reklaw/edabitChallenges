@@ -15,14 +15,24 @@ For the formulae to convert back and forth, check the Resources tab.
 */
 
 const convert = (deg) => {
-    console.log(deg.split(''));
+    let num = Number(deg.match(/^[+-]?(\d+)/g).join(''));
 
-    if(deg[deg.length - 1]
+    if(deg.includes('C')) {
+        return String(Math.round(num * (9/5) + 32)) + '°F';
+    } else if(deg.includes('F')) {
+        return String(Math.round((num - 32) * 5/9)) + '°C';
+    } else {
+			return 'Error';
+		}
+}
 
-    //Celsius to Fahrenheit
-    //C * 9/5 + 32 = F
-
-    //Fahrenheit to Celsius
-    //(F -32) * 5/9 = C
-
+//Other solution
+const convert = deg => {
+	if (!deg.includes('°')) return 'Error';
+	
+	let value = Number(deg.split('°')[0]);
+	let inFahrenheit = Math.round(value * 1.8 + 32);
+	let inCelsius = Math.round((value - 32) / 1.8);
+	
+	return deg.includes('F') ? `${inCelsius}°C` : `${inFahrenheit}°F`;
 }
