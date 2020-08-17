@@ -30,7 +30,5 @@ const longestTime = (hr, min, sec) => {
     }
 }
 
-//Other answer
-function longestTime(h, m, s) {
-	return h < m/60? m < s/60? s : m : h;
-}
+//Configured to an ternary operator
+const longestTime = (hours, mins, secs) =>  hours > mins/60 ? hours > (secs/60)/60 ? hours: secs : mins > secs/60 ? mins: secs;
