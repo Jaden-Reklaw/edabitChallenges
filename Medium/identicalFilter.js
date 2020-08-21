@@ -19,4 +19,3 @@ If there are no strings with repeating identical characters, return an empty arr
 //My Answer
 const identicalFilter = (arr) =>  arr.filter(item => new Set(item.split('')).size === 1);
 
-//Other answer
