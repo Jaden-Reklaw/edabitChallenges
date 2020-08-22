@@ -24,3 +24,6 @@ https://www.youtube.com/watch?v=OQ9Mv2jwQWo
 
 //My answer
 const compoundInterest = (principal, years, rate, n) =>  Math.round((principal + (principal * (1 + rate/n)**(n*years) - principal)) * 100) /100;
+
+//Other answer
+const compoundInterest = (p, t, r, n) => Number((p * (1 + r / n) ** (n * t)).toFixed(2));
