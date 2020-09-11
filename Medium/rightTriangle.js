@@ -11,6 +11,7 @@ This is a less famous example.
 
 rightTriangle(70, 130, 110) ➞ false
 This isn't a right angled triangle.
+
 Notes
 Notice the largest side of the triangle might not be the last one passed to the function.
 All numbers will be integers (whole numbers).
